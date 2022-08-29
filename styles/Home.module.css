@@ -4,3 +4,8 @@
   text-align: center;
   width: 54ch;
 }
+
+.map {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}

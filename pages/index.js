@@ -28,6 +28,10 @@ export default function Home({ heading, details, location }) {
   const ref = useRef();
 
   useEffect(() => {
+    if (!location) {
+      return;
+    }
+
     const mbMap = new mapboxgl.Map({
       container: ref.current.id,
       style: 'mapbox://styles/mapbox/streets-v11',

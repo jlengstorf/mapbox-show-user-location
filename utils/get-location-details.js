@@ -10,7 +10,8 @@ export async function getLocationDetails(place, token) {
   const res = await fetch(url.toString());
 
   if (!res.ok) {
-    console.error(res);
+    console.error(res.statusText);
+    return null;
   }
 
   const { features = [] } = await res.json();
